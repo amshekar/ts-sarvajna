@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://thingspace.verizon.com/documentation/apis/intelligence.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Intelligence | ThingSpace</title>
+  
+
+  
+  <meta name="template" content="documentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Loading Jquery first -->
+<script type="text/javascript" async="" src="./Intelligence _ ThingSpace_files/js"></script><script async="" src="./Intelligence _ ThingSpace_files/gtm.js.download"></script><script async="" src="./Intelligence _ ThingSpace_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Intelligence _ ThingSpace_files/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-Beos870Ij1xefDT3dDOCLVX1p/mQlpzRVMt4459dgxYar7OF3ArJi+/xWhBKBqTt"></script><script src="./Intelligence _ ThingSpace_files/jquery-3.6.0.min.js.download"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlib-base-main.css" type="text/css">
+
+
+
+
+
+
+    
+
+
+
+
+    
+<script src="./Intelligence _ ThingSpace_files/clientlib-base-main.js.download"></script>
+
+
+
+
+<!-- END OF HEADER -->
+
+
+
+  
+
+  
+    
+    
+
+    
+
+    
+    
+    
+
+<!--
+  <script src="/etc/cloudsettings.kernel.js/libs/settings/cloudsettings/legacy/contexthub" type="text/javascript"></script>
+-->
+    
+    
+  <link href="https://thingspace.verizon.com/content/dam/thingspace-portal/icons/favicon.ico" rel="icon">
+  <link rel="stylesheet" href="./Intelligence _ ThingSpace_files/animate.min.css"> <!--this link should be here for all pages shopping cart dropdown animation -->
+<style>.loader[_ngcontent-mqq-c82]{border:3px solid #f3f3f3;border-radius:50%;border-top:3px solid #bb2d2d;width:20px;height:20px;animation:1s linear infinite spin;margin:30%}#support-category[_ngcontent-mqq-c82]{border:none;background-color:transparent;width:90%;font-size:14px;line-height:14px;display:inline-block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}.support_input_text[_ngcontent-mqq-c82]{width:100%;height:42px;padding:12px 16px;font-size:14px;line-height:1.42857143;color:#000;background-color:#fff;border:1px solid #d8dada;border-bottom:1px solid #000;border-radius:0}#support-category[_ngcontent-mqq-c82]:focus, .support_input_text[_ngcontent-mqq-c82]:focus, #support-text[_ngcontent-mqq-c82]{outline:none;box-shadow:none}#support-popup-error-body[_ngcontent-mqq-c82]{display:none}#recaptcha-form[_ngcontent-mqq-c82]{margin-top:15px;float:right}.pull-right[_ngcontent-mqq-c82]{float:right}.pull-left[_ngcontent-mqq-c82]{float:left}@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.input-form-group[_ngcontent-mqq-c82]{padding:15px}.form-box[_ngcontent-mqq-c82]{margin-bottom:10px}.support_label_text[_ngcontent-mqq-c82]{padding-left:15px}.error-message[_ngcontent-mqq-c82]{padding-left:15px;color:#ff4500;font-size:12px;position:relative;top:0px;width:100%}.input-error-border[_ngcontent-mqq-c82]{border:1px solid #fda95d;border-bottom:2px solid #ED7000}.no-border[_ngcontent-mqq-c82]{border:none!important}#support-via-email[_ngcontent-mqq-c82]   .topic-list[_ngcontent-mqq-c82]   .select-show[_ngcontent-mqq-c82]:after{background:url(/content/dam/thingspace-portal/icons/arrow-down-selection.svg) no-repeat;background-position:center;width:16px;height:30px;background-size:cover;float:right;content:""}#support-via-email[_ngcontent-mqq-c82]   .topic-list[_ngcontent-mqq-c82]{width:100%;border:1px solid #e2e4e4;border-bottom:1px solid #000;padding-left:0;position:relative;margin-bottom:30px}#support-via-email[_ngcontent-mqq-c82]   .topic-list[_ngcontent-mqq-c82]   ul[_ngcontent-mqq-c82]{display:none;padding-left:0}#support-via-email[_ngcontent-mqq-c82]   .topic-list[_ngcontent-mqq-c82]   li[_ngcontent-mqq-c82]{list-style:none;width:100%;font-size:14px;padding:5px 15px;min-height:38px;border-left:5px solid #000;border-bottom:1px solid #e2e4e4;cursor:pointer;background:#fff}#support-via-email[_ngcontent-mqq-c82]   .topic-list[_ngcontent-mqq-c82]   .select-show[_ngcontent-mqq-c82]{width:100%;font-size:14px;padding:5px 15px;min-height:38px;cursor:pointer;background:#fff}#support-via-email[_ngcontent-mqq-c82]   .topic-list[_ngcontent-mqq-c82]   li[_ngcontent-mqq-c82]:hover{border-left:5px solid #d52b1e}#support-via-email[_ngcontent-mqq-c82]   .topic-list[_ngcontent-mqq-c82]   .topic-list_items[_ngcontent-mqq-c82]{border-bottom:1px solid #000;max-height:195px;overflow-y:scroll;position:absolute;z-index:9;width:100%}#support-via-email[_ngcontent-mqq-c82]   textarea[_ngcontent-mqq-c82]{background-color:#fff;border:1px solid #e2e4e4;border-bottom:1px solid #000;color:#747676;width:100%;min-height:200px}#support-via-email[_ngcontent-mqq-c82]   .btn[_ngcontent-mqq-c82]{border-radius:100px;background-color:#fff;color:#000;font-size:14px;text-align:center;font-weight:700;padding:13px 40px;margin-top:15px;border:1px solid #000}</style><style>.close[_ngcontent-mqq-c81]{position:absolute;top:0px;right:10px}.dropdown-menu[_ngcontent-mqq-c81]{width:450px;right:-160px;left:inherit;top:0}.error-message[_ngcontent-mqq-c81]{padding-top:20px}</style><style>hr{margin-top:20px;margin-bottom:0;border:0;border-top:1px solid rgba(0,0,0,.1)}
+</style><script src="./Intelligence _ ThingSpace_files/api.js.download" async="" defer=""></script><style type="text/css" id="kampyleStyle">.noOutline{outline: none !important;}.wcagOutline:focus{outline: 1px dashed #595959 !important;outline-offset: 2px !important;transition: none !important;}</style><script src="./Intelligence _ ThingSpace_files/RC82458c98ce28410ebe87b193fe02b41d-source.min.js.download" async=""></script></head>
+
+    <body class="documentation page basicpage">
+        <noscript>
+            <iframe id="testFrame" title="testFram" height="0" width="0" style="display:none;"></iframe>
+        </noscript>
+        
+        
+            
+
+
+
+            
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlib-documentation.css" type="text/css">
+
+
+
+
+
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlibs-navbar.css" type="text/css">
+
+
+
+
+
+
+    <script>
+        var rootTitle = "Documentation";
+        var pageTitle = 'Intelligence';
+    </script>
+
+    <div id="adobe-script">
+        
+    <script type="text/javascript" src="./Intelligence _ ThingSpace_files/launch-c778a68fbc72.min.js.download" id="adobe-script"></script></div>
+    <header>
+        <nav class="navbar navbar-expand-md">
+            <div class="navbar-group container">
+                
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlibs.css" type="text/css">
+<script src="./Intelligence _ ThingSpace_files/clientlibs.js.download"></script>
+
+
+
+
+
+<a class="thing-space" href="https://thingspace.verizon.com/homepage">ThingSpace</a>
+<button id="sm_menu_ham" class="navbar-menu">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+</button>
+<div class="vz-navbar-collapse" id="navbarCollapse">
+    
+        
+        <!-- DESKTOP MENU -->
+        <ul id="main-nav" class="vz-ts-navbar-nav">
+
+            
+                
+            
+                <li class="vz-ts-dropdown">
+                    <div class="menu-hover">
+                        <a href="https://thingspace.verizon.com/content/thingspace-portal/services.html" target="_self">Services</a>
+                        <div class="vz-ts-dropdown-menu">
+                            <div class="vz-ts-dropdown-menu-content">
+                                <ul id="Services" class="group-respo">
+                                    
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/connectivity.html" target="_self">Connectivity</a>
+                                            </div>
+                                            <ul class="submenu" id="Connectivity">
+
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/connectivity/5g-business-internet.html" target="_self">5G Business Internet</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/diagnostics.html" target="_self">Diagnostics</a>
+                                            </div>
+                                            <ul class="submenu" id="Diagnostics">
+
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/location.html" target="_self">Location</a>
+                                            </div>
+                                            <ul class="submenu" id="Location">
+
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/security.html" target="_self">Security</a>
+                                            </div>
+                                            <ul class="submenu" id="Security">
+
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/software-management.html" target="_self">Software Management</a>
+                                            </div>
+                                            <ul class="submenu" id="Software Management">
+
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/iot-managed-services.html" target="_self">Managed Services</a>
+                                            </div>
+                                            <ul class="submenu" id="Managed Services">
+
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/intelligence.html" target="_self">Intelligence</a>
+                                            </div>
+                                            <ul class="submenu" id="Intelligence">
+
+                                                
+                                            </ul>
+                                        </li>
+                                    
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            
+                <li class="vz-ts-dropdown">
+                    <div class="menu-hover">
+                        <a href="https://thingspace.verizon.com/content/thingspace-portal/solutions.html" target="_self">Solutions</a>
+                        <div class="vz-ts-dropdown-menu">
+                            <div class="vz-ts-dropdown-menu-content">
+                                <ul id="Solutions" class="group-respo">
+                                    
+                                    
+                                        
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                <p class="mobileMenu category">Device solutions</p>
+                                                
+                                            </div>
+                                            <ul class="submenu" id="Device solutions">
+
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/device-solutions/critical-asset-sensor.html" target="_self">Critical Asset Sensor</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/device-solutions/iot-sims.html" target="_self">IoT SIMs</a>
+                                                    </li>
+                                                
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                <p class="mobileMenu category">End to end solutions</p>
+                                                
+                                            </div>
+                                            <ul class="submenu" id="End to end solutions">
+
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/asset-management.html" target="_self">Asset Management</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/condition-based-maintenance.html" target="_self">Condition Based Maintenance</a>
+                                                    </li>
+                                                
+                                                    
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/grid-wide.html" target="_self">Grid Wide</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/intelligent-lighting.html" target="_self">Intelligent Lighting</a>
+                                                    </li>
+                                                
+                                                    
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/intelligent-video.html" target="_self">Intelligent Video</a>
+                                                    </li>
+                                                
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                <p class="mobileMenu category">Product accelerators</p>
+                                                
+                                            </div>
+                                            <ul class="submenu" id="Product accelerators">
+
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/product-accelerators/cloud-connectors.html" target="_self">Cloud Connectors</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/product-accelerators/thingspaceglobal.html" target="_self">ThingSpace Global</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/product-accelerators/thingspace-ready.html" target="_self">ThingSpace Ready</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            
+                <li class="vz-ts-dropdown">
+                    <div class="menu-hover">
+                        <a href="https://thingspace.verizon.com/content/thingspace-portal/marketplace.html" target="_self">Marketplace</a>
+                        
+
+                    </div>
+                </li>
+            
+                <li class="vz-ts-dropdown">
+                    <div class="menu-hover">
+                        <a href="https://thingspace.verizon.com/content/thingspace-portal/partners.html" target="_self">Partners</a>
+                        <div class="vz-ts-dropdown-menu">
+                            <div class="vz-ts-dropdown-menu-content">
+                                <ul id="Partners" class="group-respo">
+                                    
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/cloud-partners.html" target="_self">Cloud Partners</a>
+                                            </div>
+                                            <ul class="submenu" id="Cloud Partners">
+
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/customers.html" target="_self">Customers</a>
+                                            </div>
+                                            <ul class="submenu" id="Customers">
+
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/designhouses.html" target="_self">Design Houses</a>
+                                            </div>
+                                            <ul class="submenu" id="Design Houses">
+
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/hardware.html" target="_self">Hardware</a>
+                                            </div>
+                                            <ul class="submenu" id="Hardware">
+
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/systemintegrators.html" target="_self">System Integrators</a>
+                                            </div>
+                                            <ul class="submenu" id="System Integrators">
+
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                
+                                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/solutions.html" target="_self">Solutions</a>
+                                            </div>
+                                            <ul class="submenu" id="Solutions">
+
+                                                
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            
+                <li class="vz-ts-dropdown">
+                    <div class="menu-hover">
+                        <a class="navbar-active" href="https://thingspace.verizon.com/content/thingspace-portal/documentation.html" target="_self">Documentation</a>
+                        <div class="vz-ts-dropdown-menu">
+                            <div class="vz-ts-dropdown-menu-content">
+                                <ul id="Documentation" class="group-respo">
+                                    
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                <p class="mobileMenu category">Get Started</p>
+                                                
+                                            </div>
+                                            <ul class="submenu" id="Get Started">
+
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/get-started/global-coverage-map.html" target="_self">Global Coverage Map</a>
+                                                    </li>
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/get-started/tutorials-videos.html" target="_self">Tutorials and Videos</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                <p class="mobileMenu category">APIs</p>
+                                                
+                                            </div>
+                                            <ul class="submenu" id="APIs">
+
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/cloud-connector.html" target="_self">Cloud Connector</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/connectivity-management.html" target="_self">Connectivity Management</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/device-diagnostics.html" target="_self">Device Diagnostics</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/device-location.html" target="_self">Device Location</a>
+                                                    </li>
+                                                
+                                                    
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/software-management.html" target="_self">Software Management</a>
+                                                    </li>
+                                                
+                                                    
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/security.html" target="_self">Security</a>
+                                                    </li>
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/hyper_precise.html" target="_self">Hyper Precise Location</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/intelligence.html" target="_self">Intelligence</a>
+                                                    </li>
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/automotive-oem.html" target="_self">Automotive OEM APIs</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="second-menu sub-respo">
+                                            <div>
+                                                <p class="mobileMenu category">IoT Devices</p>
+                                                
+                                            </div>
+                                            <ul class="submenu" id="IoT Devices">
+
+                                                
+                                                    <li class="second-menu sub-respo">
+                                                        <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/iot-devices/critical-asset-sensor.html" target="_self">Critical Asset Sensor</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <!--
+
+                <li class="vz-ts-dropdown">
+                    <div class="menu-hover">
+                        <a class="" href="" target="_blank"></a>
+                    </div>
+                </li>
+            -->
+                
+        </ul>
+
+        <!-- MOBILE MENU  -->
+        <ul id="main-nav-mobile" class="vz-ts-navbar-nav">
+            
+                
+            
+                <li class="hasChild">
+                    <a href="https://thingspace.verizon.com/content/thingspace-portal/services.html" target="_self">Services</a>
+                    <div class="mobileMenu-arrow"></div>
+                    <ul id="Services" class="submenu">
+                        <li class="back-space">
+                            <a class="previous-arrow"></a>
+                            <a class="previous-text" style="padding-left:25px">Services</a>
+                        </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/connectivity.html" target="_self">Connectivity</a>
+                                <div class="mobileMenu-arrow"></div>
+                                <ul class="submenu" id="Connectivity">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Connectivity</a>
+                                    </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/connectivity/5g-business-internet.html" target="_self">5G Business Internet</a>
+                                        </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/diagnostics.html" target="_self">Diagnostics</a>
+                                
+                                <ul class="submenu" id="Diagnostics">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Diagnostics</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/location.html" target="_self">Location</a>
+                                
+                                <ul class="submenu" id="Location">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Location</a>
+                                    </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/security.html" target="_self">Security</a>
+                                
+                                <ul class="submenu" id="Security">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Security</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/software-management.html" target="_self">Software Management</a>
+                                
+                                <ul class="submenu" id="Software Management">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Software Management</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/iot-managed-services.html" target="_self">Managed Services</a>
+                                
+                                <ul class="submenu" id="Managed Services">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Managed Services</a>
+                                    </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/services/intelligence.html" target="_self">Intelligence</a>
+                                
+                                <ul class="submenu" id="Intelligence">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Intelligence</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                    </ul>
+                </li>
+            
+                <li class="hasChild">
+                    <a href="https://thingspace.verizon.com/content/thingspace-portal/solutions.html" target="_self">Solutions</a>
+                    <div class="mobileMenu-arrow"></div>
+                    <ul id="Solutions" class="submenu">
+                        <li class="back-space">
+                            <a class="previous-arrow"></a>
+                            <a class="previous-text" style="padding-left:25px">Solutions</a>
+                        </li>
+                        
+                            
+                        
+                            <li>
+                                <a class="mobileMenu">Device solutions</a>
+                                
+                                <div class="mobileMenu-arrow"></div>
+                                <ul class="submenu" id="Device solutions">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Device solutions</a>
+                                    </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/device-solutions/critical-asset-sensor.html" target="_self">Critical Asset Sensor</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/device-solutions/iot-sims.html" target="_self">IoT SIMs</a>
+                                        </li>
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                <a class="mobileMenu">End to end solutions</a>
+                                
+                                <div class="mobileMenu-arrow"></div>
+                                <ul class="submenu" id="End to end solutions">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">End to end solutions</a>
+                                    </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/asset-management.html" target="_self">Asset Management</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/condition-based-maintenance.html" target="_self">Condition Based Maintenance</a>
+                                        </li>
+                                    
+                                        
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/grid-wide.html" target="_self">Grid Wide</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/intelligent-lighting.html" target="_self">Intelligent Lighting</a>
+                                        </li>
+                                    
+                                        
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/end-to-end-solutions/intelligent-video.html" target="_self">Intelligent Video</a>
+                                        </li>
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                <a class="mobileMenu">Product accelerators</a>
+                                
+                                <div class="mobileMenu-arrow"></div>
+                                <ul class="submenu" id="Product accelerators">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Product accelerators</a>
+                                    </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/product-accelerators/cloud-connectors.html" target="_self">Cloud Connectors</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/product-accelerators/thingspaceglobal.html" target="_self">ThingSpace Global</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/solutions/product-accelerators/thingspace-ready.html" target="_self">ThingSpace Ready</a>
+                                        </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    </ul>
+                </li>
+            
+                <li class="hasChild">
+                    <a href="https://thingspace.verizon.com/content/thingspace-portal/marketplace.html" target="_self">Marketplace</a>
+                    
+                    <ul id="Marketplace" class="submenu">
+                        <li class="back-space">
+                            <a class="previous-arrow"></a>
+                            <a class="previous-text" style="padding-left:25px">Marketplace</a>
+                        </li>
+                        
+                            
+                        
+                            
+                        
+                    </ul>
+                </li>
+            
+                <li class="hasChild">
+                    <a href="https://thingspace.verizon.com/content/thingspace-portal/partners.html" target="_self">Partners</a>
+                    <div class="mobileMenu-arrow"></div>
+                    <ul id="Partners" class="submenu">
+                        <li class="back-space">
+                            <a class="previous-arrow"></a>
+                            <a class="previous-text" style="padding-left:25px">Partners</a>
+                        </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/cloud-partners.html" target="_self">Cloud Partners</a>
+                                
+                                <ul class="submenu" id="Cloud Partners">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Cloud Partners</a>
+                                    </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/customers.html" target="_self">Customers</a>
+                                
+                                <ul class="submenu" id="Customers">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Customers</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/designhouses.html" target="_self">Design Houses</a>
+                                
+                                <ul class="submenu" id="Design Houses">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Design Houses</a>
+                                    </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/hardware.html" target="_self">Hardware</a>
+                                
+                                <ul class="submenu" id="Hardware">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Hardware</a>
+                                    </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/systemintegrators.html" target="_self">System Integrators</a>
+                                
+                                <ul class="submenu" id="System Integrators">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">System Integrators</a>
+                                    </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                            
+                        
+                            
+                        
+                            <li>
+                                
+                                <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/partners/solutions.html" target="_self">Solutions</a>
+                                
+                                <ul class="submenu" id="Solutions">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Solutions</a>
+                                    </li>
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                    </ul>
+                </li>
+            
+                <li class="hasChild">
+                    <a href="https://thingspace.verizon.com/content/thingspace-portal/documentation.html" target="_self">Documentation</a>
+                    <div class="mobileMenu-arrow"></div>
+                    <ul id="Documentation" class="submenu">
+                        <li class="back-space">
+                            <a class="previous-arrow"></a>
+                            <a class="previous-text" style="padding-left:25px">Documentation</a>
+                        </li>
+                        
+                            <li>
+                                <a class="mobileMenu">Get Started</a>
+                                
+                                <div class="mobileMenu-arrow"></div>
+                                <ul class="submenu" id="Get Started">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">Get Started</a>
+                                    </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/get-started/global-coverage-map.html" target="_self">Global Coverage Map</a>
+                                        </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/get-started/tutorials-videos.html" target="_self">Tutorials and Videos</a>
+                                        </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                <a class="mobileMenu">APIs</a>
+                                
+                                <div class="mobileMenu-arrow"></div>
+                                <ul class="submenu" id="APIs">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">APIs</a>
+                                    </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/cloud-connector.html" target="_self">Cloud Connector</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/connectivity-management.html" target="_self">Connectivity Management</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/device-diagnostics.html" target="_self">Device Diagnostics</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/device-location.html" target="_self">Device Location</a>
+                                        </li>
+                                    
+                                        
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/software-management.html" target="_self">Software Management</a>
+                                        </li>
+                                    
+                                        
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/security.html" target="_self">Security</a>
+                                        </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/hyper_precise.html" target="_self">Hyper Precise Location</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/intelligence.html" target="_self">Intelligence</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/automotive-oem.html" target="_self">Automotive OEM APIs</a>
+                                        </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                            <li>
+                                <a class="mobileMenu">IoT Devices</a>
+                                
+                                <div class="mobileMenu-arrow"></div>
+                                <ul class="submenu" id="IoT Devices">
+                                    <li class="back-space">
+                                        <a class="previous-arrow"></a>
+                                        <a class="previous-text" style="padding-left:25px">IoT Devices</a>
+                                    </li>
+                                    
+                                        <li>
+                                            <a class="mobileMenu" href="https://thingspace.verizon.com/content/thingspace-portal/documentation/iot-devices/critical-asset-sensor.html" target="_self">Critical Asset Sensor</a>
+                                        </li>
+                                    
+                                </ul>
+                            </li>
+                        
+                            
+                        
+                            
+                        
+                    </ul>
+                </li>
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <!--
+
+                <li>
+                    <a href="" target="_blank"></a>
+                </li>
+            -->
+        </ul>
+       
+    
+</div>
+
+                
+                <div class="extra-icons">
+                    <div id="search-icon" class="magnified-glass"></div>
+                </div>
+
+                <ng-signin-register disablerecaptcha="false" _nghost-mqq-c82="" ng-version="13.3.2"><div _ngcontent-mqq-c82="" class="ng-signin-register"><div _ngcontent-mqq-c82="" id="after-logedIn"><cart-dropdown _ngcontent-mqq-c82="" _nghost-mqq-c81=""><div _ngcontent-mqq-c81=""><div _ngcontent-mqq-c81="" class="user-show cart"><div _ngcontent-mqq-c81="" class="cart-icon"><span _ngcontent-mqq-c81="" class="icons-tooltip">Shopping Cart</span><span _ngcontent-mqq-c81="" class="tooltip-arrow"></span></div></div><div _ngcontent-mqq-c81="" class="user-show cart-full" hidden=""><div _ngcontent-mqq-c81="" class="cart-has-items"></div><div _ngcontent-mqq-c81="" id="cartDropDownButton"><div _ngcontent-mqq-c81="" class="cart-black-icon"><span _ngcontent-mqq-c81="">0</span><span _ngcontent-mqq-c81="" class="icons-tooltip">Shopping Cart</span><span _ngcontent-mqq-c81="" class="tooltip-arrow"></span></div><div _ngcontent-mqq-c81="" id="grey-overlay" class="popup-overlay-BG"></div></div><div _ngcontent-mqq-c81="" id="cartDropDown"><div _ngcontent-mqq-c81="" id="cart-detail" class="dropdown-menu animate__animated animate__fadeInDown"><div _ngcontent-mqq-c81="" class="mb20 mt20 ml30"><span _ngcontent-mqq-c81="" id="empty-cart-text" class="h20 bold">Cart is empty</span><!----><!----><button _ngcontent-mqq-c81="" id="close-dropdown-btn" type="button" class="close"><img _ngcontent-mqq-c81="" src="./Intelligence _ ThingSpace_files/close.svg" alt="" width="10" height="10"></button></div><cart-list _ngcontent-mqq-c81="" class="cart-item"><!----></cart-list><!----><div _ngcontent-mqq-c81="" class="footer row mb20"><div _ngcontent-mqq-c81="" class="sub-total col-md-12"><!----></div><div _ngcontent-mqq-c81="" class="col-md-7"><button _ngcontent-mqq-c81="" id="view-cart-btn" class="btn-white pull-left"> View Cart(0) </button></div><div _ngcontent-mqq-c81="" class="col-md-5"><button _ngcontent-mqq-c81="" id="checkout-btn" class="btn-black pull-right"> Checkout </button></div><!----></div></div></div></div></div></cart-dropdown><div _ngcontent-mqq-c82="" class="user-show support"><a _ngcontent-mqq-c82="" data-toggle="dropdown" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false" role="button" id="supportMenu" data-display="static" class="dropdown-toggle"><div _ngcontent-mqq-c82="" class="support-icon"></div><span _ngcontent-mqq-c82="" class="icons-tooltip">Support</span><span _ngcontent-mqq-c82="" class="tooltip-arrow"></span></a><ul _ngcontent-mqq-c82="" aria-labelledby="supportMenu" class="dropdown-menu"><a _ngcontent-mqq-c82="" href="https://thingspace.verizon.com/Documentation/support/faq.html"><li _ngcontent-mqq-c82=""><span _ngcontent-mqq-c82="">FAQ link</span></li></a><a _ngcontent-mqq-c82=""><li _ngcontent-mqq-c82=""><span _ngcontent-mqq-c82="">Support</span></li></a></ul></div><div _ngcontent-mqq-c82="" class="user-show feedback"><span _ngcontent-mqq-c82="" id="feedbackAtHeader" class="feedback-icon"></span><div _ngcontent-mqq-c82="" class="icons-tooltip">Feedback</div><span _ngcontent-mqq-c82="" class="tooltip-arrow"></span></div><div _ngcontent-mqq-c82="" class="user-show verizon-app"><a _ngcontent-mqq-c82="" data-toggle="dropdown" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false" role="button" id="appsnMenu" data-display="static" class="dropdown-toggle"><div _ngcontent-mqq-c82="" class="verizonApps-icon"></div><span _ngcontent-mqq-c82="" class="icons-tooltip">Verizon App</span><span _ngcontent-mqq-c82="" class="tooltip-arrow"></span></a><ul _ngcontent-mqq-c82="" aria-labelledby="appsMenu" class="dropdown-menu"><a _ngcontent-mqq-c82="" href="https://m2m.verizonwireless.com/m2m/index.html#nenManageEnrollment" target="_blank" rel="noopener noreferrer"><li _ngcontent-mqq-c82=""><span _ngcontent-mqq-c82="">Network Event Notification</span></li></a><a _ngcontent-mqq-c82="" href="https://onsitenetworkdashboard.verizon.com/" target="_blank" rel="noopener noreferrer"><li _ngcontent-mqq-c82=""><span _ngcontent-mqq-c82="">On Site Network Dashboard</span></li></a><a _ngcontent-mqq-c82="" href="http://opendevelopment.verizonwireless.com/" target="_blank" rel="noopener noreferrer"><li _ngcontent-mqq-c82=""><span _ngcontent-mqq-c82="">Open Development</span></li></a><a _ngcontent-mqq-c82="" href="https://thingspace.verizon.com/" target="_blank" rel="noopener noreferrer"><li _ngcontent-mqq-c82=""><span _ngcontent-mqq-c82="">ThingSpace Developer</span></li></a><a _ngcontent-mqq-c82="" href="https://thingspace.verizonwireless.com/Portal/manage/dashboard" target="_blank" rel="noopener noreferrer"><li _ngcontent-mqq-c82=""><span _ngcontent-mqq-c82="">ThingSpace Manage</span></li></a><a _ngcontent-mqq-c82="" href="https://www.verizon.com/business/resources/partner-program/" target="_blank" rel="noopener noreferrer"><li _ngcontent-mqq-c82=""><span _ngcontent-mqq-c82="">Verizon Partner Program</span></li></a></ul></div><div _ngcontent-mqq-c82="" id="user-profile" class="user-show"><a _ngcontent-mqq-c82="" data-toggle="dropdown" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false" role="button" id="signInMenu" data-display="static" class="dropdown-toggle"><div _ngcontent-mqq-c82="" class="user-icon"></div><span _ngcontent-mqq-c82="" class="icons-tooltip">Profile</span><span _ngcontent-mqq-c82="" class="tooltip-arrow"></span></a><ul _ngcontent-mqq-c82="" aria-labelledby="signInMenu" class="dropdown-menu"><a _ngcontent-mqq-c82="" href="javascript:void(0)"><li _ngcontent-mqq-c82="">Sign in</li></a><a _ngcontent-mqq-c82="" href="javascript:void(0)"><li _ngcontent-mqq-c82="">Sign up</li></a></ul></div><!----><!----></div></div><div _ngcontent-mqq-c82="" id="support-via-email" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" class="modal fade"><div _ngcontent-mqq-c82="" role="document" class="modal-dialog modal-lg modal-dialog-centered"><div _ngcontent-mqq-c82="" class="modal-content"><div _ngcontent-mqq-c82="" class="modal-header"><h5 _ngcontent-mqq-c82=""> Contact Support </h5><button _ngcontent-mqq-c82="" type="button" data-dismiss="modal" aria-label="Close" class="close"><span _ngcontent-mqq-c82="" aria-hidden="true"><img _ngcontent-mqq-c82="" src="./Intelligence _ ThingSpace_files/close.svg" alt="" width="20" height="20"></span></button></div><div _ngcontent-mqq-c82="" class="modal-body ng-untouched ng-pristine ng-invalid"><div _ngcontent-mqq-c82="" id="support-popup-body" class="row"><div _ngcontent-mqq-c82="" class="col-md-12"> Sorry to hear that you encountered a problem. We would love to help. <br _ngcontent-mqq-c82=""> Please fill out the form below and a customer service representative will be with you shortly. </div><div _ngcontent-mqq-c82="" class="row input-form-group"><div _ngcontent-mqq-c82="" class="col-md-6 form-box"><label _ngcontent-mqq-c82="" class="support_label_text">Name*</label><input _ngcontent-mqq-c82="" placeholder="Name*" nospaces="" formcontrolname="name" class="support_input_text ng-untouched ng-pristine ng-invalid"><!----></div><div _ngcontent-mqq-c82="" class="col-md-6 form-box"><label _ngcontent-mqq-c82="" class="support_label_text">Username</label><input _ngcontent-mqq-c82="" placeholder="Username" formcontrolname="username" class="support_input_text ng-untouched ng-pristine ng-valid"></div><div _ngcontent-mqq-c82="" class="col-md-6 form-box"><label _ngcontent-mqq-c82="" class="support_label_text">Email*</label><input _ngcontent-mqq-c82="" placeholder="Email*" formcontrolname="email" class="support_input_text ng-untouched ng-pristine ng-invalid"><!----></div><div _ngcontent-mqq-c82="" class="col-md-6 form-box"><label _ngcontent-mqq-c82="" class="support_label_text">Phone</label><input _ngcontent-mqq-c82="" placeholder="Phone" formcontrolname="phone" class="support_input_text ng-untouched ng-pristine ng-valid"><!----></div><div _ngcontent-mqq-c82="" class="col-md-6 form-box"><label _ngcontent-mqq-c82="" class="support_label_text">Account Number</label><input _ngcontent-mqq-c82="" nospaces="" formcontrolname="account_number" class="support_input_text ng-untouched ng-pristine ng-valid" placeholder="Account Number"><!----></div></div><div _ngcontent-mqq-c82="" class="col-md-12"> Category* <ul _ngcontent-mqq-c82="" class="topic-list"><div _ngcontent-mqq-c82="" class="select-show"><input _ngcontent-mqq-c82="" id="support-category" type="text" readonly="" placeholder="Select" formcontrolname="category" class="ng-untouched ng-pristine ng-invalid"></div><!----><ul _ngcontent-mqq-c82="" class="topic-list_items"><li _ngcontent-mqq-c82=""> Billing </li><li _ngcontent-mqq-c82=""> Data / SMS </li><li _ngcontent-mqq-c82=""> Provisioning (Activation, Deactivation, etc.) </li><li _ngcontent-mqq-c82=""> User Profile / Account </li><li _ngcontent-mqq-c82=""> Other </li><!----></ul></ul><p _ngcontent-mqq-c82=""> Please describe the problem you are encountering. Include any Device IDs. </p><textarea _ngcontent-mqq-c82="" id="support-text" formcontrolname="description" nospaces="" class="ng-untouched ng-pristine ng-invalid"></textarea><!----><div _ngcontent-mqq-c82=""><div _ngcontent-mqq-c82="" class="row"><div _ngcontent-mqq-c82="" class="col-md-12"><div _ngcontent-mqq-c82="" id="recaptcha-form"><re-captcha _ngcontent-mqq-c82="" id="recaptcha-ref"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="./Intelligence _ ThingSpace_files/anchor.html" width="304" height="78" role="presentation" name="a-mdspj36i28nk" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./Intelligence _ ThingSpace_files/saved_resource(1).html"></iframe></re-captcha><div _ngcontent-mqq-c82="" id="reset-recaptcha"></div></div></div></div><!----><div _ngcontent-mqq-c82="" class="row"><div _ngcontent-mqq-c82="" class="col-md-12"><div _ngcontent-mqq-c82="" class="pull-left"><button _ngcontent-mqq-c82="" id="close-support-popup" type="button" class="btn btn-white mr30"><span _ngcontent-mqq-c82="">Cancel</span></button></div><div _ngcontent-mqq-c82="" class="pull-right"><button _ngcontent-mqq-c82="" id="form_submit" type="button" value="send" class="btn btn-black" disabled=""><span _ngcontent-mqq-c82="">Submit</span></button></div></div></div></div></div></div></div></div></div></div><div _ngcontent-mqq-c82="" id="successMessageModal" tabindex="-1" role="dialog" aria-labelledby="successMessageModal" data-backdrop="static" aria-hidden="true" data-keyboard="false" class="modal fade"><div _ngcontent-mqq-c82="" role="document" class="modal-dialog modal-dialog-centered"><div _ngcontent-mqq-c82="" class="modal-content"><div _ngcontent-mqq-c82="" class="modal-header"><h4 _ngcontent-mqq-c82="">Your email has been sent</h4><button _ngcontent-mqq-c82="" type="button" data-dismiss="modal" class="close">×</button></div><div _ngcontent-mqq-c82="" class="modal-body"><div _ngcontent-mqq-c82=""><p _ngcontent-mqq-c82="">A support representative will be in touch with you soon.</p></div></div></div></div></div><div _ngcontent-mqq-c82="" id="failureMessageModal" tabindex="-1" role="dialog" aria-labelledby="failureMessageModal" data-backdrop="static" aria-hidden="true" data-keyboard="false" class="modal fade"><div _ngcontent-mqq-c82="" role="document" class="modal-dialog modal-dialog-centered"><div _ngcontent-mqq-c82="" class="modal-content"><div _ngcontent-mqq-c82="" class="modal-header"><h4 _ngcontent-mqq-c82="">Thank you for contacting us</h4><button _ngcontent-mqq-c82="" type="button" data-dismiss="modal" class="close">×</button></div><div _ngcontent-mqq-c82="" class="modal-body"><div _ngcontent-mqq-c82=""><p _ngcontent-mqq-c82="">Sorry, we are unable to submit your response at this time, please try again later.</p></div></div></div></div></div></ng-signin-register>
+                
+                <!-- TODO: move to a template -->
+                <div id="search-header" class="search-header">
+                    <form action="https://thingspace.verizon.com/content/thingspace-portal/search.html" role="search" method="get" class="component search-component" data-quick-suggestions-enabled="true" data-quick-suggestions="/content/thingspace-portal/search/jcr:content/par/search/quick-suggestions.suggestions.json" data-quick-search-results-enabled="true" data-quick-search-results="/content/thingspace-portal/search/jcr:content/par/search/quick-results.results.json">
+
+                        <section class="search-field">
+    <div class="container">
+	    <div class="search-field--wrapper">
+
+            <div class="magnified-glass"></div>
+            <input class="search-input" type="text" name="q" placeholder="Search..." autocomplete="off">
+                <input class="submit" type="submit" value="Go">
+                <button id="cancel-button" type="button" class="cancel"></button>
+            
+            
+            
+        </div>
+    </div>
+</section>
+                        <div class="container">
+                                <!-- Quick results overlay -->
+                                <div class="quick-lists pt-3" data-quick-lists="">
+                                    <dl class="quick-suggestions" data-quick-suggestions="">
+                                        <div id="suggested-search-div">Suggested search terms...</div>
+                                    </dl>
+                                    
+                                    <hr>
+                                    
+                                    <dl class="quick-results pb-3" data-quick-results="">
+                                        <div id="quick-results-div" class="quick-results-link">Quick results</div>
+                                    </dl>
+                                </div>
+                        </div>
+                    </form>
+
+                    
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlibs(1).css" type="text/css">
+<script src="./Intelligence _ ThingSpace_files/clientlibs.js(1).download"></script>
+
+
+
+
+                    <!-- this wont load if we are on search page -->
+                    
+    
+<script src="./Intelligence _ ThingSpace_files/clientlibs-navbar.js.download"></script>
+
+
+
+                </div>
+
+            </div>
+        </nav>
+        <div class="menu-overlayBG"></div>
+    </header>
+
+
+
+
+
+
+<div class="banner">
+     <section class="ts-banners banner-s">
+          <div class="container">
+          <div class="banner-text-white ts-banner-small">Intelligence</div>
+          </div>
+       </section>
+   </div>
+
+
+
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlib-breadcrumb.css" type="text/css">
+<script src="./Intelligence _ ThingSpace_files/clientlib-breadcrumb.js.download"></script>
+
+
+
+<nav class="container breadcrumb" aria-label="breadcrumb">
+<ul class="breadcrumb-list">
+    <li class="breadcrumb-item ">
+        <a href="javascript:;" link="/content/thingspace-portal/documentation.html" onclick="cleanURL(event)">Documentation</a>
+    </li>
+    
+
+    
+    <li class="breadcrumb-item ">
+        <a style="cursor: default;">APIs</a>
+    </li>
+
+    <li class="breadcrumb-item active">
+        <a href="javascript:;" link="/content/thingspace-portal/documentation/apis/intelligence.html" onclick="cleanURL(event)">Intelligence</a>
+    </li>
+    
+</ul>
+</nav>
+
+    
+
+
+
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlibs-tablecontent.css" type="text/css">
+
+
+
+
+<div class="resources-edge">
+    <div class="container left-menu-resp">
+        <div class="submenu-show-icon"></div>
+        <div class="submenu-hide-icon"></div>
+
+        <div class="row pt30 pb100">
+            <div class="col-md-3 ts-docs">
+                <div>
+                    <div>
+                    
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlibs-site-navigation.css" type="text/css">
+
+
+
+
+
+
+<aside class="doc-side-nav" id="myScrollspy">
+    <script>
+        var subtitle = "";
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</aside>
+
+
+    
+<script src="./Intelligence _ ThingSpace_files/clientlibs-site-navigation.js.download"></script>
+
+
+
+                    </div>
+                    <div>
+                        
+<div id="experiencefragment-70c142c949" class="cmp-experiencefragment cmp-experiencefragment--anomaly-detection">
+
+    
+
+
+
+<div class="xf-content-height">
+    
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="navigationlist aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlib-navigationlist.css" type="text/css">
+
+
+
+
+
+    <ul>
+        
+
+            <li class="active">
+
+                <!-- if there is no link event -->
+                
+
+                <!-- on click function call-->
+                
+
+                <!-- simple link -->
+                <a class="active parent-list" id="intelligence" href="https://thingspace.verizon.com/documentation/apis/intelligence.html" target="_self">
+                    Anomaly Detection
+                </a>
+
+                
+            </li>
+
+            
+        
+
+            <li class="non-active">
+
+                <!-- if there is no link event -->
+                
+
+                <!-- on click function call-->
+                
+
+                <!-- simple link -->
+                <a class="non-active parent-list" id="what-is-new" href="https://thingspace.verizon.com/documentation/apis/intelligence/what-is-new.html" target="_self">
+                    What's New
+                </a>
+
+                
+            </li>
+
+            
+        
+
+            <li class="non-active">
+
+                <!-- if there is no link event -->
+                
+
+                <!-- on click function call-->
+                
+
+                <!-- simple link -->
+                <a class="non-active parent-list" id="try-it-now" href="https://thingspace.verizon.com/documentation/apis/intelligence/try-it-now.html" target="_blank">
+                    API Console
+                </a>
+
+                
+            </li>
+
+            
+        
+
+            <li class="non-active">
+
+                <!-- if there is no link event -->
+                
+
+                <!-- on click function call-->
+                
+
+                <!-- simple link -->
+                <a class="non-active parent-list" id="intelligence-api-reference" href="https://thingspace.verizon.com/documentation/apis/intelligence/intelligence-api-reference.html" target="_self">
+                    API Reference
+                </a>
+
+                <div class="plus-minus icon-plus" data-toggle="collapse" data-target="#intelligence-api-reference-child" aria-expanded="true">
+                </div>
+            </li>
+
+            <ul class="child-layer collapse" id="intelligence-api-reference-child">
+                
+                    <li class="non-active">
+
+                        
+
+                        <a class="non-active" id="activate-detection" href="https://thingspace.verizon.com/documentation/apis/intelligence/intelligence-api-reference/activate-detection.html" target="_self">
+                            Activate Anomaly Detection
+                        </a>
+                    </li>
+                
+                    <li class="non-active">
+
+                        
+
+                        <a class="non-active" id="detection-settings" href="https://thingspace.verizon.com/documentation/apis/intelligence/intelligence-api-reference/detection-settings.html" target="_self">
+                            Retrieve Settings for Anomaly Detection
+                        </a>
+                    </li>
+                
+                    <li class="non-active">
+
+                        
+
+                        <a class="non-active" id="detection-reset" href="https://thingspace.verizon.com/documentation/apis/intelligence/intelligence-api-reference/detection-reset.html" target="_self">
+                            Reset Parameters for Anomaly Detection
+                        </a>
+                    </li>
+                
+                    <li class="non-active">
+
+                        
+
+                        <a class="non-active" id="trigger-create" href="https://thingspace.verizon.com/documentation/apis/intelligence/intelligence-api-reference/trigger-create.html" target="_self">
+                            Creating a Trigger for Anomaly Detection
+                        </a>
+                    </li>
+                
+                    <li class="non-active">
+
+                        
+
+                        <a class="non-active" id="trigger-update" href="https://thingspace.verizon.com/documentation/apis/intelligence/intelligence-api-reference/trigger-update.html" target="_self">
+                            Updating a Trigger for Anomaly Detection
+                        </a>
+                    </li>
+                
+                    <li class="non-active">
+
+                        
+
+                        <a class="non-active" id="trigger-get" href="https://thingspace.verizon.com/documentation/apis/intelligence/intelligence-api-reference/trigger-get.html" target="_self">
+                            Retrieving Trigger Settings for Anomaly Detection
+                        </a>
+                    </li>
+                
+                    <li class="non-active">
+
+                        
+
+                        <a class="non-active" id="delete-trigger" href="https://thingspace.verizon.com/documentation/apis/intelligence/intelligence-api-reference/delete-trigger.html" target="_self">
+                            Deleting a Trigger
+                        </a>
+                    </li>
+                
+            </ul>
+        
+    </ul>
+
+
+
+    
+<script src="./Intelligence _ ThingSpace_files/clientlib-navigationlist.js.download"></script>
+
+
+
+</div>
+
+    
+</div>
+
+</div></div>
+
+    
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 main-data gap40 ts-docs">
+                <div>
+<div class="cmp-title">
+    <h1 class="cmp-title__text">Intelligence</h1>
+</div>
+
+    
+
+</div>
+                <div>
+
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlib-richtexteditor.css" type="text/css">
+
+
+
+    
+
+
+
+<div>
+    <p>ThingSpace Intelligence is an umbrella product name for the ThingSpace bundle and products specific for ThingSpace Intelligence. This release of ThingSpace introduces a new product set known as ThingSpace Anomaly Detection, a product only available as part of the ThingSpace Intelligence bundle.</p>
+
+</div>
+
+    
+
+
+
+    
+<script src="./Intelligence _ ThingSpace_files/clientlib-richtexteditor.js.download"></script>
+
+
+</div>
+                <div>
+                    
+                    
+
+                    
+
+
+
+
+    
+    
+    <div class="richtexteditor text">
+
+    
+
+
+
+    
+
+
+
+<div>
+    <h2>Anomaly detection overview<br>
+</h2>
+<p>The service uses machine learning to classify and cluster different devices on your account and alert you for unusual behavior in the device data usage patterns. The unusual alert or event is based on the sensitivity to which you would classify an event as anomalous or not.&nbsp;</p>
+<ul>
+<li><p>These anomaly detection thresholds can be set at an account level using these Intelligence API’s below.</p>
+</li>
+<li><p>Top anomalous devices can be viewed in the analytics dashboard in the ThingSpace portal</p>
+</li>
+<li><p>Users can create alerts associated with the events by configuring an alert rule using the <a href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/intelligence/intelligence-api-reference/trigger-create.html">usage trigger API</a></p>
+</li>
+<li><p>Alerts can be viewed in the alerts panel or via <a href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/intelligence/intelligence-api-reference/trigger-create.html#callback">a callback</a>. For more information about callbacks, please visit <a href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/connectivity-management/working-with-verizon/about-callback-services.html">About Callback Services</a>.</p>
+</li>
+</ul>
+<ul>
+<li><p>Anomaly detection service prerequisites</p>
+<ul>
+<li><p>ThingSpace account access:</p>
+<ul>
+<li><p>Your Verizon Enterprise billing account number</p>
+</li>
+<li><p>Your ThingSpace Develop account credentials</p>
+</li>
+<li><p>Your account’s UWS login credentials</p>
+</li>
+</ul>
+</li>
+<li><p>RTR (Verizon real time reporting) - eligible data plans</p>
+</li>
+<li><p>1 week of training of RTR data from active lines on the Verizon network</p>
+</li>
+<li><p>ThingSpace <a href="https://thingspace.verizon.com/services/intelligence.html">Intelligence premium bundle</a></p>
+</li>
+</ul>
+</li>
+<li><p>Anomaly detection machine learning model</p>
+<ul>
+<li><p>The Anomaly Detection service uses machine learning to cluster and classify devices on the account based on data connectivity. The model splits up the week into 168 buckets (hours) and uses device behavior data from those hours to train a model and infer anomalous behavior based on the cluster.</p>
+</li>
+<li><p>Using these groupings, ThingSpace will alert for unusual data usage behavior. Such alerts or events are filtered based on the sensitivity set in the anomaly detection API.</p>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+    
+
+
+
+    
+
+
+</div>
+
+
+    
+    
+    <div class="richtexteditor text">
+
+    
+
+
+
+    
+
+
+
+<div>
+    <h2>Anomaly detection workflow</h2>
+<p><img src="./Intelligence _ ThingSpace_files/anomaly-event-generation2.jpg"></p>
+<p>&nbsp;</p>
+<p>Machine Learning training (steps 1-3): Assuming the prerequisites are met, the machine learning model is trained per steps 1-3 in the diagram above.</p>
+<p>Anomaly settings (step 4): Each anomaly alert has a rarity score. This setting defines what is considered&nbsp; “abnormal” and what is “very abnormal” in the context of this billing account. These definitions are used in the analytics dashboard, reports and rules.&nbsp;Users have the option of <a href="https://thingspace.verizon.com/content/thingspace-portal/documentation/apis/intelligence/intelligence-api-reference/trigger-create.html">setting rules and alerts</a> associated with anomaly events (step 4a)</p>
+<p>Alerts (step 5): Alerts are generated and available in the ThingSpace portal.Alert notifications (steps 5a-6a): With a rule trigger assigned, users can be notified via email or to a callback server. The ThingSpace portal and callback include a summary of the events.</p>
+<p>&nbsp;</p>
+
+</div>
+
+    
+
+
+
+    
+
+
+</div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+<script src="./Intelligence _ ThingSpace_files/clientlibs-tablecontent.js.download"></script>
+
+
+
+
+<div></div>
+<div>
+</div>
+<div>
+
+
+
+
+</div>
+
+
+    
+<script src="./Intelligence _ ThingSpace_files/clientlib-documentation.js.download"></script>
+
+
+
+
+
+            
+    
+    
+<div id="vzw_oo_tab" aria-label="Activate to launch feedback form"></div>
+
+    
+<script src="./Intelligence _ ThingSpace_files/clientlib-feedback.js.download"></script>
+
+
+
+
+<script src="./Intelligence _ ThingSpace_files/embed.js.download"></script>
+
+    
+
+    <footer>
+    
+    
+<link rel="stylesheet" href="./Intelligence _ ThingSpace_files/clientlibs(2).css" type="text/css">
+
+
+
+
+    <div class="container">
+        <div class="footer-body">
+            <div class="float-left legal">
+                <img src="./Intelligence _ ThingSpace_files/Verizon-logo.jpg" class="mb5" alt="default_icon">
+                <span class="mb10-resp">
+                    <a href="https://thingspace.verizon.com/content/thingspace-portal/about.html">About us</a>
+                </span>
+                <span class="mb10-resp">
+                    <a href="https://www.verizon.com/about/privacy/full-privacy-policy" target="_blank">
+                        Privacy policy
+                    </a>
+                </span>
+                <span class="mb10-resp">
+                    <a href="https://www.verizon.com/privacy/your-privacy-choices" class="your-privacy-choices" target="_blank">
+                        Your Privacy Choices
+                    </a>
+                </span>
+                <span class="mb10-resp">
+                    <a href="https://thingspace.verizon.com/content/thingspace-portal/legal.html">
+                        Terms and conditions
+                    </a>
+                </span>
+                <span class="mb10-resp">
+                    <a href="https://www.verizon.com/about/our-company/open-internet" target="_blank">
+                        Open Internet
+                    </a>
+                </span>
+
+                <div class="copy-rights">
+                    <p class="right">©
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>2023 Verizon. All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <div class="connect-us">Follow</div>
+                <div class="logos-cover">
+                    <a href="https://www.linkedin.com/company/verizonbusiness/" target="_blank">
+                        <img alt="twitter" src="./Intelligence _ ThingSpace_files/linkedin-logo.svg">
+                    </a>
+                    <a href="https://twitter.com/VerizonBusiness/" target="_blank">
+                        <img alt="twitter" src="./Intelligence _ ThingSpace_files/twitter-logo.svg">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCL9bd7Pw6c_HXXusLswHGYw" target="_blank">
+                        <img alt="youtube" src="./Intelligence _ ThingSpace_files/youtube-logo.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+    
+    
+
+<!-- BOOTSTRAP -->
+<script src="./Intelligence _ ThingSpace_files/popper.min.js.download" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="./Intelligence _ ThingSpace_files/bootstrap.min.js.download" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    
+<script src="./Intelligence _ ThingSpace_files/clientlib-main.js.download"></script>
+
+
+
+    
+
+    
+
+
+            
+
+        
+    
+
+<script type="text/javascript" async="" src="./Intelligence _ ThingSpace_files/generic1681889764905.js.download" charset="UTF-8"></script><style title="MDigital_animationStyle"></style><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" src="./Intelligence _ ThingSpace_files/bframe.html" name="c-mdspj36i28nk" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div><meta name="google-site-verification" content="U8_PgHgTBRvwsbqQhkBn6hVCdCwu5iNMVmfzz9INcXM"><script async="" src="./Intelligence _ ThingSpace_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  
+  var dl = adobeDataLayer.getState();
+  
+  
+  gtag('js', new Date());
+  
+  gtag('config',_satellite.getVar("measurement_id"),{
+   'page_url': dl.page_url,
+    'business_org': 'thingspace'
+});  
+</script>
+</body></html>
