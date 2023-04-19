@@ -5,10 +5,10 @@ thanks to
 https://llamahub.ai/
 
  # Team: ts- sarvajna
- # Ravi Addepalli
- # Shekar Gadamoni
+      # Ravi Addepalli & Shekar Gadamoni
+ 
  # Generate API Key 
- # Copy some conetnt from Ts-IoT api documentation
+ # Copy some content from Ts-IoT api documentation
  # Train the model with our custom data
  # use the index and ask the questions
  
