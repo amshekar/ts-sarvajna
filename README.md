@@ -8,7 +8,7 @@ https://llamahub.ai/
       
  
  
- # Copy some content from Ts-IoT api documentation
+ # Copy some content from public api documentation, drop some unstrustured data of knowledge base files under data folder
   Train the model with our custom data
   use the  index and ask the questions
  
