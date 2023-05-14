@@ -1,6 +1,6 @@
 # ts-sarvajna
 
-I am excited to present to you an omniscient app that can answer all your questions. This app is powered by a state-of-the-art large language model called LlAMa, which is based on the GPT architecture.
+I am excited to present to you an omniscient app that can answer all your questions. This app is powered by a state-of-the-art large language model called LlAMa, which is based on the GPT(Generative Pre-trained Transformer) architecture.
 
 In this presentation, we will cover the following topics:
 
